@@ -12,27 +12,20 @@ public class Peamurdja2_ristmik  extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Foor foor1 = new Foor(Foor.YLEMINE, primaryStage);
-        foor1.vahetaPunast();
-        foor1.paus(0.5);
-
-        Foor foor2 = new Foor(Foor.ALUMINE, primaryStage);
-        foor2.vahetaPunast();
-        foor2.paus(0.5);
-        Foor foor3 = new Foor(Foor.PAREM, primaryStage);
-        foor3.vahetaPunast();
-        foor3.paus(0.5);
-        Foor foor4 = new Foor(Foor.VASAK, primaryStage);
-        foor4.vahetaPunast();
-        foor4.paus(0.5);
-
-        roheliseks (foor1);
-        roheliseks(foor1);
-        roheliseks(foor1);
         roheliseks(foor1);
 
-        public void roheliseks(Foor misiganes) {
+    }
+
+    public void roheliseks(Foor misiganes) {
+
+        misiganes.vahetaPunast();
+        misiganes.paus(0.5);
+        misiganes.vahetaKollast();
+        misiganes.paus(0.5);
+        misiganes.vahetaPunast();
+        misiganes.vahetaKollast();
+        misiganes.vahetaRohelist();
 
     }
-    }
-    }
+}
 
