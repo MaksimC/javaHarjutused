@@ -47,6 +47,7 @@ public class Peamurdja2_ristmik  extends Application {
             foor.paus(0.5);
             foor.vahetaKollast();
             count++;
+
         }
 
 
