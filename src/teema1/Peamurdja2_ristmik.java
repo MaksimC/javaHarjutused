@@ -26,14 +26,13 @@ public class Peamurdja2_ristmik  extends Application {
         while (count<10){
 
 
-            if (suund !=0){
+            if (count !=0){
                 foor.vahetaPunast();
                 foor.paus(7.5);
                 foor.vahetaKollast();
                 foor.paus(0.5);
                 foor.vahetaPunast();
                 foor.vahetaKollast();
-
             }
                 foor.vahetaRohelist();
                 foor.paus(3);
@@ -46,46 +45,12 @@ public class Peamurdja2_ristmik  extends Application {
                 foor.vahetaRohelist();
                 foor.paus(0.5);
                 foor.vahetaRohelist();
-
                 foor.vahetaKollast();
                 foor.paus(0.5);
                 foor.vahetaKollast();
-
-                foor.vahetaRohelist();
-                foor.vahetaRohelist();
-
-
-
-
-            }
-            /*else {
-                foor.vahetaRohelist();
-                foor.paus(3);
-                foor.vahetaRohelist();
-                foor.paus(0.5);
-                foor.vahetaRohelist();
-                foor.paus(0.5);
-                foor.vahetaRohelist();
-                foor.paus(0.5);
-                foor.vahetaRohelist();
-                foor.paus(0.5);
-                foor.vahetaRohelist();
-
-                foor.vahetaKollast();
-                foor.paus(0.5);
-                foor.vahetaKollast();
-
-
-
-                foor.vahetaPunast();
-                foor.paus(7.5);
-                foor.vahetaKollast();
-                foor.paus(0.5);
-                foor.vahetaPunast();
-                foor.vahetaKollast();
-
-            }*/
             count++;
+            }
+
 
     }
 }
