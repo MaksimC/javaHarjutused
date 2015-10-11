@@ -15,5 +15,5 @@ import java.util.Scanner;
  * 3. Kas oskad ka nii, et laevad ei ole 1x1 vaid 1x2 ja 1x3 ja orienteeruvad
  *    nii vertikaalselt kui ka horisontaalselt?
  */
-public class Peamurdja3_laevad {
+public class Peaüoimurdja3_laevad {
 }
