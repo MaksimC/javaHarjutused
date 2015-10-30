@@ -24,6 +24,15 @@ public class Laevad {
         genereeriLaud();
         paigutaLaevad();
         kysikasutajat();
+        kontrollitabamist();
+    }
+
+    private static void kontrollitabamist() {
+        int tabamus = (laud[xy[0]][xy[1]]);
+        if (tabamus == 0) {
+            System.out.println("laks mooda");
+
+        } else if (tabamus == )
     }
 
     public static void genereeriLaud() {
@@ -39,11 +48,13 @@ public class Laevad {
             System.out.println(Arrays.toString(laud[i]));
         }
     }
-    private static void kysikasutajat() {
+    private static int[] kysikasutajat() {
         System.out.println("Sisesta X ja Y koordinadid (tuhik vahel)");
         String sisestus = sc.nextLine(); //5 6
-        int x = (int) sisestus.charAt(0);
-        int y = (int) sisestus.charAt(2);
+        int x = Integer.parseInt(sisestus.substring(0, 1));
+        int y = Integer.parseInt(sisestus.substring(2, 3));
         System.out.println("Kasutaha sisestas x "+ x + " y " +y);
+        int[] xy = new int[]{x, y};
+        return xy;
     }
 }
