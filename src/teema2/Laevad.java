@@ -20,19 +20,42 @@ public class Laevad {
         // kontrollitabamust();
         // kasOnLaevaAlles();
         // gameover();
+        // kysipommiasukohta();
 
         genereeriLaud();
         paigutaLaevad();
         kysikasutajat();
         kontrollitabamist();
+        kysipommiasukohta();
     }
 
-    private static void kontrollitabamist() {
-        int tabamus = (laud[xy[0]][xy[1]]);
-        if (tabamus == 0) {
-            System.out.println("laks mooda");
+    private static int[] kysipommiasukohta() {
+        try {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("utle rea number");
+            int x = sc.nextInt() - 1;
+            System.out.println("utle veeru number");
+            int y = sc.nextInt() -1;
+            int[] xy = {x,y};
+            return xy;
+        }
+        catch (Exception e) {
+            System.out.println("Kirjuta number");
+        }
+        return kysipommiasukohta();
+    }
 
-        } else if (tabamus == )
+    private static void kontrollitabamist(int[] xy) {
+        int x = xy[0];
+        int y = xy[1];
+        int sihtpunkt = laud[y][x];
+        if (sihtpunkt == 1) {
+            System.out.println("Zavalil!");
+            laud[y][x] = 2;
+        } else if (sihtpunkt == 0) {
+            System.out.println("Vmazal!");
+        }
+
     }
 
     public static void genereeriLaud() {
