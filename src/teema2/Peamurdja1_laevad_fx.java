@@ -17,12 +17,15 @@ import javafx.stage.Stage;
  */
 public class Peamurdja1_laevad_fx extends Application {
     Stage lava;
+    StackPane maailm;
     GridPane laud;
     int laevaServaPikkus = 150;
     int lauaPikkus = 3;
+    Image laevaPilt = new Image("teema2/pirate.png");
+    ImagePattern laevaMuster = new ImagePattern(laevaPilt);
+
 
     @Override
-
     public void start (Stage primaryStage) throws Exception {
         lava = primaryStage;
         seadistaLava();
@@ -30,13 +33,38 @@ public class Peamurdja1_laevad_fx extends Application {
         reageeriKlikidele();
         laevasidAlles();
         gameover();
+    }
 
+    private void seadistaLava() {
+        maailm = new StackPane();
+        laud = new GridPane();
+        maailm.getChildren().add(laud);
+        Scene manguStseen = new Scene (maailm, laevaServaPikkus*lauaPikkus, laevaServaPikkus*lauaPikkus);
+        lava.setScene(manguStseen);
+        lava.show(); //naita aken
+        lava.setOnCloseRequest(event -> {System.exit(0); }); //akna sulgedes laheb programm kinni
+    }
+
+    private void gereeriGrid() {
+        for (int i = 0; i < lauaPikkus; i++) {
+            for (int j = 0; j < lauaPikkus; j++) {
+                Rectangle ruut = new Rectangle(laevaServaPikkus, laevaServaPikkus);
+                int rand = (int) (Math.random() * 2);
+                if (rand == 1) {
+                    ruut.setId("meri");
+                } else {
+                    ruut.setId("laev");
+                }
+                ruut.setFill(Color.BLUE);
+                ruut.setStroke(Color.BLACK);
+                laud.add (ruut, i, j);
+            }
+        }
     }
 
     private void gameover() {
         Label tekst = new Label ("tubli");
         maailm.getChildren().add(tekst);
-
     }
 
     private boolean laevasidAlles() {
@@ -51,50 +79,15 @@ public class Peamurdja1_laevad_fx extends Application {
     private void reageeriKlikidele() {
         laud.setOnMouseClicked(event -> {
             Rectangle ruut = (Rectangle) event.getTarget();
-            String ruutId = ruut.getId();
-            if (ruutId.equals ("laev")) {
+            String ruutID = ruut.getId();
+            if (ruutID.equals("laev")) {
                 ruut.setFill(Color.RED);
                 ruut.setId("pohjas");
-                System.out.println("pihtas!");
-            } else if (ruutId.equals("meri")); {
+            } else if (ruutID.equals("meri")) {
                 ruut.setFill(Color.DARKBLUE);
-                System.out.println("mooda!");
-            } else if (ruutId.equals("pohjas"));{
+            } else if (ruutID.equals("pohjas")){
                 System.out.println("juba lasid sinna");
             }
-            if (!laevasidAlles()) {
-                System.out.println("GAME OVER");
-                gameover();
-            }
         });
-    }
-
-    private void gereeriGrid() {
-        for (int i = 0; i < lauaPikkus; i++) {
-            for (int j = 0; j < lauaPikkus; j++) {
-                Rectangle ruut = new Rectangle(laud, laevaServaPikkus, laevaServaPikkus);
-                int rand = (int) (Math.random() * 2);
-                if (rand == 1) {
-                    ruut.setId("meri");
-                } else {
-                    ruut.setId("laev");
-                }
-                ruut.setFill(Color.BLUE);
-                ruut.setStroke(Color.BLACK);
-                laud.add (ruut, i, j);
-            }
-
-        }
-
-    }
-
-    private void seadistaLava() {
-        maailm = new StackPane;
-        laud = new GridPane();
-        maailm.getChildren
-        Scene manguStseen = new Scene (maailm, lauaPikkus*lauaSer, lauaPikkus);
-        lava.setScene(manguStseen);
-        lava.show(); //naita aken
-        lava.setOnCloseRequest(event -> {System.exit(0); }); //akna sulgedes laheb programm kinni
     }
 }
