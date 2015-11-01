@@ -25,7 +25,7 @@ public class Laevad {
         genereeriLaud();
         paigutaLaevad();
         kysikasutajat();
-        kontrollitabamist();
+        // kontrollitabamist();
         kysipommiasukohta();
     }
 
