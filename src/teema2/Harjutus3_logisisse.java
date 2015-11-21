@@ -1,17 +1,13 @@
 package teema2;
 
 import javafx.application.Application;
-
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.omg.CORBA.portable.ApplicationException;
 
 /**
  * 1. Loo sisse logimise ekraan (ainult visuaal)
@@ -21,25 +17,30 @@ import org.omg.CORBA.portable.ApplicationException;
  */
 public class Harjutus3_logisisse extends Application {
     @Override
-    public void start (Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) throws Exception {
         VBox vbox = new VBox();
-        Scene stseen = new Scene(vbox);
-        primaryStage.setScene(stseen);
+        Scene loginScene = new Scene(vbox);
+        primaryStage.setScene(loginScene);
         primaryStage.show();
 
-        Label kasutajalabel = new Label("kasutajanimi");
+        Label kasutajaLabel = new Label("Kasutaja");
         TextField kasutajaInput = new TextField();
+        Label parooliLabel = new Label("Parool");
+        PasswordField paroolInput = new PasswordField();
+        Button loginNupp = new Button("Logi sisse");
 
-        Label paroolilabel = new Label("parool");
-        TextField parooliInput = new TextField();
+        Label teade = new Label();
 
-        Button nupp = new Button("Logi Sisse");
-        nupp.setOnAction(event -> {
-            System.out.println("sul on kaput");
+        vbox.getChildren().addAll(kasutajaLabel, kasutajaInput, parooliLabel, paroolInput, loginNupp, teade);
+
+        loginNupp.setOnAction(event -> {
+            String kasutaja = kasutajaInput.getText();
+            String parool = paroolInput.getText();
+            if (kasutaja.equals("Krister") && parool.equals("täiegasalajane")) {
+                System.out.println("SAID SISSE!");
+            } else {
+                teade.setText("Vale parool/kasutaja");
+            }
         });
-        vbox.getChildren().addAll(kasutajalabel, kasutajaInput, paroolilabel, parooliInput, nupp);
-
     }
 }
-
-
