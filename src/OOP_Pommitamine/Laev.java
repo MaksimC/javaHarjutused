@@ -26,4 +26,20 @@ public class Laev {
     public boolean oledElus() {
         return elus;
     }
+
+    public boolean kasTabas(int[] lask) {
+        if (Arrays.equals(koordinadid, lask)) {
+        elus = false;
+        return true;
+        }
+        return false;
+    }
+
+    public boolean oledSiin(int x, int y) {
+        if (x == koordinadid[0] && y == koordinadid[1]){
+        return  true;}
+
+        return false;
+
+    }
 }

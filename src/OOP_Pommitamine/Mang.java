@@ -9,7 +9,7 @@ public class Mang {
         /*
 *1. mangu seadistada
 *2. mangu toos hoidmine
-*3. kui mang on labi, mis saab
+*3. kui mang on labi, mis saab?
 */
 
         //1. Mangu seadistus
@@ -18,8 +18,9 @@ public class Mang {
 
        //2. mangu toos hoidmine
         while (meri.laevuOnAlles()) {
+            meri.Kuvalaud();
             int[] lask = mangija.kuhuLasta();
-            /*boolean pihtas = meri.saiPihta(lask);
+            boolean pihtas = meri.saiPihta(lask);
             if (pihtas) {
                 mangija.pihtas();
             } else {
@@ -27,6 +28,6 @@ public class Mang {
             }
         }
         //3. Kui mang on labi, mis saab?
-        mangija.gameover();*/
+        mangija.gameover();
     }
 }
