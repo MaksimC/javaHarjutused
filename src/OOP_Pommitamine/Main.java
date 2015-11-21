@@ -13,8 +13,8 @@ public class Main {
 * */
 
         //1. Mangu seadistus
-        /*Meri meri = new Meri(10);*/
-       /* Mangija mangija = new Mangija();
+        Meri meri = new Meri(10);*/
+       Mangija mangija = new Mangija();
 
         //2. mangu toos hoidmine
         while (meri.laevuOnAlles()) {

@@ -17,7 +17,7 @@ public class Mang {
         Mangija mangija = new Mangija();
 
         //2. mangu toos hoidmine
-        /* while (meri.laevuOnAlles()) {
+         while (meri.laevuOnAlles()) {
             int[] lask = mangija.kuhuLasta();
             boolean pihtas = meri.saiPihta(lask);
             if (pihtas) {
@@ -27,6 +27,6 @@ public class Mang {
             }
         }
         //3. Kui mang on labi, mis saab?
-        mangija.gameover();*/
+        mangija.gameover();
     }
 }

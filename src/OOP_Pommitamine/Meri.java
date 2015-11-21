@@ -20,4 +20,13 @@ public class Meri {
 
         }
     }
+    public boolean laevuOnAlles() {
+        for (int i = 0; i < laevastik.lenght; i++) {
+            boolean elus = laevastik[i].oledElus();
+            if (elus) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
