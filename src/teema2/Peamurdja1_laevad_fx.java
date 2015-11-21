@@ -1,3 +1,4 @@
+/**
 package teema2;
 
 import javafx.application.Application;
@@ -15,6 +16,7 @@ import javafx.stage.Stage;
 /**
  * Joonista laevade pommitamine kasutades JavaFXi.
  */
+/**
 public class Peamurdja1_laevad_fx extends Application {
     Stage lava;
     GridPane laud;
@@ -98,3 +100,4 @@ public class Peamurdja1_laevad_fx extends Application {
         lava.setOnCloseRequest(event -> {System.exit(0); }); //akna sulgedes laheb programm kinni
     }
 }
+*/

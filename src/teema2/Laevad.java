@@ -1,3 +1,4 @@
+/**
 package teema2;
 
 import java.util.Arrays;
@@ -6,6 +7,7 @@ import java.util.Scanner;
 /**
  * Created by mtseljab on 30.10.15.
  */
+/**
 public class Laevad {
     static int[][] laud;
     static int laualaius = 3;
@@ -81,3 +83,4 @@ public class Laevad {
         return xy;
     }
 }
+*/
