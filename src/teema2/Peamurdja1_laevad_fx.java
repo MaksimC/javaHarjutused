@@ -126,6 +126,6 @@ public class Peamurdja1_laevad_fx extends Application {
     }
 }
 */
-=======
-}
->>>>>>> 44592773ad3885eb80bf62086b5d4c305b6bde4e
+
+
+

@@ -14,7 +14,7 @@ public class Laev {
         laevaPikkus = pikkus;
         genereeriKoordinadid(lauaServaPikkus);
     }
-
+r
     private void genereeriKoordinadid(int lauaServaPikkus) {
         Random rand = new Random();
         int x = rand.nextInt(lauaServaPikkus);
