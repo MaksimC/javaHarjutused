@@ -17,9 +17,9 @@ public class Mang {
         Mangija mangija = new Mangija();
 
        //2. mangu toos hoidmine
-        /*hile (meri.laevuOnAlles()) {
+        while (meri.laevuOnAlles()) {
             int[] lask = mangija.kuhuLasta();
-            boolean pihtas = meri.saiPihta(lask);
+            /*boolean pihtas = meri.saiPihta(lask);
             if (pihtas) {
                 mangija.pihtas();
             } else {
