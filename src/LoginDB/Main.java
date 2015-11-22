@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Andmebaas a = new Andmebaas();
-        a.seadistaTabel();
+        //a.seadistaTabel();
         new LoginScreen();
     }
 }

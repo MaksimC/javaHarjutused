@@ -31,6 +31,10 @@ public class LoginScreen {
         registerButton.setOnAction(e -> {
             String kasutajaNimi = kasutajaInput.getText();
             String parool = kasutajaInput.getText();
+            Andmebaas a = new Andmebaas();
+            a.regisreeriKasutaja(kasutajaNimi, parool);
+            a.kuvaRead(kasutajaNimi);
+            a.sulgeBaas();
         });
 
     }
